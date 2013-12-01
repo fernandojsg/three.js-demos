@@ -68,11 +68,10 @@ function Transition ( sceneA, sceneB ) {
 			"vec4 texel2 = texture2D( tDiffuse2, vUv );",
 			
 			"if (useTexture==1) {",
+				
 				"vec4 transitionTexel = texture2D( tMixTexture, vUv );",
-				"float mixf=0.0;",
 				"float r = mixRatio * (1.0 + threshold * 2.0) - threshold;",
-				"mixf = (transitionTexel.r - r)*(1.0/threshold);",
-				"mixf=clamp(mixf,0.0,1.0);",
+				"float mixf=clamp((transitionTexel.r - r)*(1.0/threshold), 0.0, 1.0);",
 				
 				"gl_FragColor = mix( texel1, texel2, mixf );",
 			"} else {",
