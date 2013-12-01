@@ -1,4 +1,0 @@
-threejsdemos
-============
-
-three.js demos
