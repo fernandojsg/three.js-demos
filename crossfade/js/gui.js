@@ -1,7 +1,7 @@
 var transitionParams = {
 	"useTexture": true,
 	"transition": 0.5,
-	"transitionSpeed": 1.5,
+	"transitionSpeed": 2.0,
 	"texture": 5,
 	"loopTexture": true,
 	"animateTransition": true,
