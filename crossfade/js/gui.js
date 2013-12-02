@@ -1,7 +1,7 @@
 var transitionParams = {
 	"useTexture": true,
 	"transition": 0.5,
-	"transitionSpeed": 2.5,
+	"transitionSpeed": 2.0,
 	"texture": 5,
 	"loopTexture": true,
 	"animateTransition": true,
@@ -11,10 +11,6 @@ var transitionParams = {
 function initGUI() {
 	
 	var gui = new dat.GUI();
-
-	gui.add(transitionParams, "animateTransition");
-	gui.add(transitionParams, "transition", 0, 1, 0.01).listen();
-	gui.add(transitionParams, "transitionSpeed", 0.5, 5, 0.01);
 
 	gui.add(transitionParams, "useTexture").onChange(function(value) {
 		
@@ -36,4 +32,8 @@ function initGUI() {
 		
 	});
 
+	gui.add(transitionParams, "animateTransition");
+	gui.add(transitionParams, "transition", 0, 1, 0.01).listen();
+	gui.add(transitionParams, "transitionSpeed", 0.5, 5, 0.01);
+	
 }
